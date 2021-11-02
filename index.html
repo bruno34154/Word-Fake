@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>word fake</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <nav>
+
+  	<div class="text-area">
+      <p class="text"> Tipo de fonte: 
+      <select id="fontType" onchange="fontFam()">
+        <option value ="helvetica" class="helvetica">Helvetica</option>
+        <option value="arial" class="arial">Arial</option>
+        <option value ="impact" class="impact">Impact</option>
+        <option value="charcoal" class="charcoal">Charcoal</option>
+        <option value="sansserif" class="sansserif">Sans-serif</option>
+        <option value="times" class="times">Times</option>
+       
+      </select>
+      </p>
+  		<p class="text">Tamanho da fonte:  <input type="number" id="fontSize" class="text-space" value="12"> <button onclick="size()">Ok</button></p>
+  		<p class="text">  Alinhar texto: 
+  			<button  onclick="left()"><img src="img//esquerda.png" class="img-align" title="esquerda"></button>
+  			 <button  onclick="right()"><img src="img//direita.png" class="img-align" title="direita"></button>
+  			 <button  onclick="center()"><img src="img//centralizar.png" class="img-align" title="centralizar"></button>
+  			 <button  onclick="justify()"><img src="img//justificar.png" class="img-align" title="justificar"></button>
+  		</p>	
+     
+  	</div>
+
+    <hr width="2" align="center" size="150" color="black">
+
+    <div class="text-area">
+      <p class="text"> Efeitos de texto:
+        <label class="Teste" >
+             <input type="checkbox" name="field[]" value="on" class="option__input" id="check1">
+            <label for="check1"></label>
+          
+             <input type="checkbox" name="field[]" value="on" class="option__input" id="check2">
+              <label for="check2"></label>
+          
+          
+             <input type="checkbox" name="field[]" value="on" class="option__input" id="check3">
+             <label for="check3"></label>
+          
+        </label>
+        <button onclick="efeito()" >Ok</button>  
+        
+      </p>
+
+      <p class="text"> Cor:
+        <button  onclick="preto()"><img src="img//preto.png" class="img-color" title="preto"></button>
+        <button  onclick="cinzaescuro()"><img src="img//cinza-escuro.png" class="img-color" title="cinza escuro"></button>
+        <button  onclick="cinzaclaro()"><img src="img//cinza-claro.png" class="img-color" title="cinza claro"></button>
+        <button  onclick="branco()"><img src="img//branco.png" class="img-color" title="branco"></button>
+        <button  onclick="vermelho()"><img src="img//vermelho.png" class="img-color" title="vermelho"></button>
+        <button  onclick="vemelhocoral()"><img src="img//vermelho-coral.png" class="img-color" title="vermelho-coral"></button>
+        <button  onclick="rosa()"><img src="img//rosa.png" class="img-color" title="rosa"></button>
+        <br>
+         <button class="button" onclick="margenta()"><img src="img//margenta.png" class="img-color" title="margenta"></button>
+        <button  onclick="roxo()"><img src="img//roxo.png" class="img-color" title="roxo"></button>
+        <button  onclick="violeta()"><img src="img//violeta.png" class="img-color" title="violeta"></button>
+        <button  onclick="turquesa()"><img src="img//turquesa.png" class="img-color" title="turquesa"></button>
+        <button  onclick="azulagua()"><img src="img//azul-agua.png" class="img-color" title="azul agua"></button>
+         <button  onclick="azulturquesa()"><img src="img//azul-turquesa.png" class="img-color" title="azul turquesa"></button>
+         <button  onclick="azulclaro()"><img src="img//azul-claro.png" class="img-color" title="azul claro"></button>
+        <br> 
+           <button class="button" onclick="azul()"><img src="img//azul.png" class="img-color" title="azul"></button>
+           <button  onclick="cobalto()"><img src="img//cobalto.png" class="img-color" title="azul cobalto"></button>
+           <button  onclick="verde()"><img src="img//verde.png" class="img-color" title="verde"></button>
+           <button  onclick="verdefolha()"><img src="img//verde-folha.png" class="img-color" title="verde folha"></button>
+           <button  onclick="verdelimao()"><img src="img//verde-limao.png" class="img-color" title="verde limão"></button>
+           <button  onclick="amarelo()"><img src="img//amarelo.png" class="img-color" title="amarelo"></button>
+           <button  onclick="laranja()"><img src="img//laranja.png" class="img-color" title="laranja"></button>
+      </p>
+
+    </div>
+
+    <hr width="2" align="center" size="150" color="black">
+
+    <div class="text-area">
+      <p class="text">Fundo do texto:
+          <select id="backgroundfont" onchange="backfont()">
+            <option value ="sem" > não selecionado</option>
+            <option value="cinzaescuro" > cinza escuro</option>
+            <option value ="cinzaclaro" > cinza claro</option>
+            <option value="preto" > preto</option>
+            <option value="vermelho" > vermelho</option>
+            <option value="vermelhocoral" > vermelho coral</option>
+            <option value="rosa">rosa</option>
+            <option value="margenta">margenta</option>
+            <option value="roxo">roxo</option>
+            <option value="violeta">violeta</option>
+            <option value="turquesa">turquesa</option>
+            <option value="azulagua">azul agua</option>
+            <option value="azulturquesa">azul turquesa</option>
+            <option value="azulclaro">azul claro</option>
+            <option value="azul">azul</option>
+            <option value="cobalto">verde</option>
+            <option value="verde">verde</option>
+            <option value="verdefolha">verde folha</option>
+            <option value="verdelimao">verde limão</option>
+            <option value="amarelo">amarelo</option>
+            <option value="laranja">laranja</option>
+           
+          </select>
+      </p>
+
+      <p class="text"> Orientação:
+        <button class="buttonori" onclick="portrait()"><img src="img//orientacao.jpg" class="img-portrait" title="retrato"></button>
+         <button class="buttonori" onclick="landscape()"><img src="img//orientacao.jpg" class="img-landscape" title="paisagem"></button>
+        
+      </p>
+    </div>
+  </nav>
+  <div class="boxtext">
+  		<textarea id="textInput"></textarea>
+  </div>
+      
+      <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
