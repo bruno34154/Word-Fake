@@ -20,7 +20,19 @@ nav{
 	align-items: start ;
 	justify-content: start;
 }
+.img-page{
+	width: 70px;
+	height: 90px;
+	border: solid black 2px; 
 
+}
+.btnpage{
+	margin-left: 10px;
+	font-size: 15px;
+	border: solid black 2px; 
+	font-weight: bold;
+
+}
 .text-space{
 
 	width: 30%;

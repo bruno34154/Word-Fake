@@ -1,10 +1,15 @@
 var texto = document.getElementById("textInput");
+var textoclass = document.querySelector(".text-input");
 var fsize= document.getElementById("fontSize");
 var checknegrito = document.getElementById("check1");
 var checkitalico = document.getElementById("check2");
 var checksublinhado = document.getElementById("check3");
 var select_font = document.getElementById("fontType");
 var select_background = document.getElementById("backgroundfont");
+var clone;
+var textoclone;
+var clonesalt = [];
+
 
 /*tamanho texto*/
 function size(){
@@ -256,9 +261,30 @@ function portrait(){
 
 	texto.style.width = "900px"
 	texto.style.height = "1000px"
+    for(i=0; i<clonesalt.length; i++){
+		clonesalt[i].style.width = "900px"
+		clonesalt[i].style.height = "1000px"
+    }
+	
+
 }
 
 function landscape(){
 	texto.style.width = "1500px"
 	texto.style.height = "700px"
+    for(i=0; i<clonesalt.length; i++){
+		clonesalt[i].style.width = "1500px"
+		clonesalt[i].style.height = "700px"
+    }
+	
+
+	}
+
+// clonar
+
+function copy(){
+	 textoclone = textoclass.cloneNode(true);
+     clone = document.body.appendChild(textoclone);
+     clone;
+     clonesalt.push(clone);
 }
