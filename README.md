@@ -3,6 +3,7 @@
 ## Sobre o projeto:
 
 Este foi feito em inspiração ao tradicional editor de textos word, nessa aplicação você poderá escrever texto e modificar:
+* Criar nova pagina
 * Tamanho da fonte.
 * Tipo da fonte.
 * Cor do texto.
