@@ -11,20 +11,30 @@ var textoclone;
 var clonesalt = [];
 
 
+
 /*tamanho texto*/
 function size(){
     try{
- 	   texto.style.fontSize = fsize.value + "px";
- 	  for(i=0; i<clonesalt.length; i++){
-	      clonesalt[i].style.fontSize = fsize.value + "px";
-    	}
- 	   if (fsize.value == "") {
- 	   	throw new Error("Você deixou o campo em branco!!!");
- 	   }
+	    let tecla = event.keyCode;
+	    switch(tecla){
+	    	case 13:
+	    	  texto.style.fontSize = fsize.value + "px";
+		 	  for(i=0; i<clonesalt.length; i++){
+			      clonesalt[i].style.fontSize = fsize.value + "px";
+		    	}
+		 	   if (fsize.value == "") {
+		 	   	throw new Error("Você deixou o campo em branco!!!");
+		 	   }
+		 	   break;	
+    }
+ 	 
     }catch(e){
     	alert(e.message);
     }
 }
+
+fsize.addEventListener("keydown", size);
+
 
 /*alinhar texto*/
 function left(){
@@ -96,8 +106,52 @@ function fontFam(){
 
 }
 
+checknegrito.addEventListener("change", ()=>{
+	if(checknegrito.checked){
+       texto.style.fontWeight = "bold";
+        for(i=0; i<clonesalt.length; i++){
+	      clonesalt[i].style.fontWeight = "bold";
+    	} 
+	}else{
+		texto.style.fontWeight = "normal";
+        for(i=0; i<clonesalt.length; i++){
+	      clonesalt[i].style.fontWeight = "normal";
+    	}
+	}
+});
+
+checkitalico.addEventListener("change", ()=>{
+	 if (checkitalico.checked) {
+       texto.style.fontStyle = "italic";
+       for(i=0; i<clonesalt.length; i++){
+	      clonesalt[i].style.fontStyle = "italic";
+    	}
+
+    } else {
+        texto.style.fontStyle = "normal";
+        for(i=0; i<clonesalt.length; i++){
+	      clonesalt[i].style.fontStyle = "normal";
+	   }
+    }
+  });
+ checksublinhado.addEventListener("change", ()=>{
+ 	if(checksublinhado.checked){
+         texto.style.textDecoration = "underline";
+         for(i=0; i<clonesalt.length; i++){
+	      clonesalt[i].style.textDecoration = "underline";
+    	}
+
+    }
+    else{
+    	texto.style.textDecoration = "none";
+    	for(i=0; i<clonesalt.length; i++){
+	      clonesalt[i].style.textDecoration = "none";
+    	}
+    }
+    });
+
 /*efeitos*/
-  function efeito(){
+  /*function efeito(){
 
   	  if (checknegrito.checked) {
         texto.style.fontWeight = "bold";
@@ -138,7 +192,7 @@ function fontFam(){
 	      clonesalt[i].style.textDecoration = "none";
     	}
     }
-  }  
+  } */ 
 
   /*cores*/
 

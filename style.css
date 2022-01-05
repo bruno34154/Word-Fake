@@ -36,6 +36,7 @@ nav{
 .text-space{
 
 	width: 30%;
+
 }
 
 .text{
@@ -139,3 +140,5 @@ input#check3 + label {
 input[type=checkbox]:checked + label{
 	border: 2px solid black;
 }
+
+
