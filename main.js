@@ -106,6 +106,8 @@ function fontFam(){
 
 }
 
+/*efeitos*/
+
 checknegrito.addEventListener("change", ()=>{
 	if(checknegrito.checked){
        texto.style.fontWeight = "bold";
@@ -150,49 +152,8 @@ checkitalico.addEventListener("change", ()=>{
     }
     });
 
-/*efeitos*/
-  /*function efeito(){
 
-  	  if (checknegrito.checked) {
-        texto.style.fontWeight = "bold";
-        for(i=0; i<clonesalt.length; i++){
-	      clonesalt[i].style.fontWeight = "bold";
-    	}
-    } else {
-        texto.style.fontWeight = "normal";
-        for(i=0; i<clonesalt.length; i++){
-	      clonesalt[i].style.fontWeight = "normal";
-    	}
-    }
-
-      if (checkitalico.checked) {
-       texto.style.fontStyle = "italic";
-       for(i=0; i<clonesalt.length; i++){
-	      clonesalt[i].style.fontStyle = "italic";
-    	}
-
-    } else {
-        texto.style.fontStyle = "normal";
-        for(i=0; i<clonesalt.length; i++){
-	      clonesalt[i].style.fontStyle = "normal";
-    	}
-
-    }
-
-    if(checksublinhado.checked){
-         texto.style.textDecoration = "underline";
-         for(i=0; i<clonesalt.length; i++){
-	      clonesalt[i].style.textDecoration = "underline";
-    	}
-
-    }
-    else{
-    	texto.style.textDecoration = "none";
-    	for(i=0; i<clonesalt.length; i++){
-	      clonesalt[i].style.textDecoration = "none";
-    	}
-    }
-  } */ 
+  
 
   /*cores*/
 
