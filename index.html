@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <nav>
+  <nav id="nav">
     <div class="textarea">
        <button class="btnpage"onclick="copy()"><p></p><img src="img//nova pagina.png" class="img-page" title="branco"> <br> Nova <br> pagina</p></button></p>
     </div>
@@ -24,10 +24,10 @@
       </p>
   		<p class="text">Tamanho da fonte:  <input type="number" id="fontSize" class="text-space" value="12" title="digite o tamanho da fonte e após isso pressione enter para alterar"> 
   		<p class="text">  Alinhar texto: 
-  			<button  onclick="left()"><img src="img//esquerda.png" class="img-align" title="esquerda"></button>
-  			 <button  onclick="right()"><img src="img//direita.png" class="img-align" title="direita"></button>
-  			 <button  onclick="center()"><img src="img//centralizar.png" class="img-align" title="centralizar"></button>
-  			 <button  onclick="justify()"><img src="img//justificar.png" class="img-align" title="justificar"></button>
+  			<button  onclick="TextAlign('left')"><img src="img//esquerda.png" class="img-align" title="esquerda"></button>
+  			 <button  onclick="TextAlign('right')"><img src="img//direita.png" class="img-align" title="direita"></button>
+  			 <button  onclick="TextAlign('center')"><img src="img//centralizar.png" class="img-align" title="centralizar"></button>
+  			 <button  onclick="TextAlign('justify')"><img src="img//justificar.png" class="img-align" title="justificar"></button>
   		</p>	
      
   	</div>
@@ -53,29 +53,29 @@
       </p>
 
       <p class="text"> Cor:
-        <button  onclick="preto()"><img src="img//preto.png" class="img-color" title="preto"></button>
-        <button  onclick="cinzaescuro()"><img src="img//cinza-escuro.png" class="img-color" title="cinza escuro"></button>
-        <button  onclick="cinzaclaro()"><img src="img//cinza-claro.png" class="img-color" title="cinza claro"></button>
-        <button  onclick="branco()"><img src="img//branco.png" class="img-color" title="branco"></button>
-        <button  onclick="vermelho()"><img src="img//vermelho.png" class="img-color" title="vermelho"></button>
-        <button  onclick="vemelhocoral()"><img src="img//vermelho-coral.png" class="img-color" title="vermelho-coral"></button>
-        <button  onclick="rosa()"><img src="img//rosa.png" class="img-color" title="rosa"></button>
+        <button  onclick="setColor('black')"><img src="img//preto.png" class="img-color" title="preto"></button>
+        <button  onclick="setColor('#545454')"><img src="img//cinza-escuro.png" class="img-color" title="cinza escuro"></button>
+        <button  onclick="setColor('#d9d9d9')"><img src="img//cinza-claro.png" class="img-color" title="cinza claro"></button>
+        <button  onclick="setColor('white')"><img src="img//branco.png" class="img-color" title="branco"></button>
+        <button  onclick="setColor('#ff1616')"><img src="img//vermelho.png" class="img-color" title="vermelho"></button>
+        <button  onclick="setColor('#ff5757')"><img src="img//vermelho-coral.png" class="img-color" title="vermelho-coral"></button>
+        <button  onclick="setColor('#ff66c4')"><img src="img//rosa.png" class="img-color" title="rosa"></button>
         <br>
-         <button class="button" onclick="margenta()"><img src="img//margenta.png" class="img-color" title="margenta"></button>
-        <button  onclick="roxo()"><img src="img//roxo.png" class="img-color" title="roxo"></button>
-        <button  onclick="violeta()"><img src="img//violeta.png" class="img-color" title="violeta"></button>
-        <button  onclick="turquesa()"><img src="img//turquesa.png" class="img-color" title="turquesa"></button>
-        <button  onclick="azulagua()"><img src="img//azul-agua.png" class="img-color" title="azul agua"></button>
-         <button  onclick="azulturquesa()"><img src="img//azul-turquesa.png" class="img-color" title="azul turquesa"></button>
-         <button  onclick="azulclaro()"><img src="img//azul-claro.png" class="img-color" title="azul claro"></button>
+         <button class="button" onclick="setColor('#cb6ce6')"><img src="img//margenta.png" class="img-color" title="margenta"></button>
+        <button  onclick="setColor('#8c52ff')"><img src="img//roxo.png" class="img-color" title="roxo"></button>
+        <button  onclick="setColor('#5e17eb')"><img src="img//violeta.png" class="img-color" title="violeta"></button>
+        <button  onclick="setColor('#03989e')"><img src="img//turquesa.png" class="img-color" title="turquesa"></button>
+        <button  onclick="setColor('#00c2cb')"><img src="img//azul-agua.png" class="img-color" title="azul agua"></button>
+         <button  onclick="setColor('#5ce1e6')"><img src="img//azul-turquesa.png" class="img-color" title="azul turquesa"></button>
+         <button  onclick="setColor('#38b6ff')"><img src="img//azul-claro.png" class="img-color" title="azul claro"></button>
         <br> 
-           <button class="button" onclick="azul()"><img src="img//azul.png" class="img-color" title="azul"></button>
-           <button  onclick="cobalto()"><img src="img//cobalto.png" class="img-color" title="azul cobalto"></button>
-           <button  onclick="verde()"><img src="img//verde.png" class="img-color" title="verde"></button>
-           <button  onclick="verdefolha()"><img src="img//verde-folha.png" class="img-color" title="verde folha"></button>
-           <button  onclick="verdelimao()"><img src="img//verde-limao.png" class="img-color" title="verde limão"></button>
-           <button  onclick="amarelo()"><img src="img//amarelo.png" class="img-color" title="amarelo"></button>
-           <button  onclick="laranja()"><img src="img//laranja.png" class="img-color" title="laranja"></button>
+           <button class="button" onclick="setColor('#5271ff')"><img src="img//azul.png" class="img-color" title="azul"></button>
+           <button  onclick="setColor('#004aad')"><img src="img//cobalto.png" class="img-color" title="azul cobalto"></button>
+           <button  onclick="setColor('#008037')"><img src="img//verde.png" class="img-color" title="verde"></button>
+           <button  onclick="setColor('#7ed957')"><img src="img//verde-folha.png" class="img-color" title="verde folha"></button>
+           <button  onclick="setColor('#69e265')"><img src="img//verde-limao.png" class="img-color" title="verde limão"></button>
+           <button  onclick="setColor('#ffde59')"><img src="img//amarelo.png" class="img-color" title="amarelo"></button>
+           <button  onclick="setColor('#ff914d')"><img src="img//laranja.png" class="img-color" title="laranja"></button>
       </p>
 
     </div>
